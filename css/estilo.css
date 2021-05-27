@@ -1,20 +1,75 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    border-color: red;
-    border-style: solid;
-    border-width: 1px;
+    color: #333333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-p {
+/*Temos três tipos de elementos que precisam ser centralizados no meio da
+página. Vamos copiar e colar as instruções CSS nos 3 lugares? Não!
+Criamos uma classe no HTML a ser aplicada em todos esses pontos e um
+único seletor no CSS.*/
+.container {
+    margin:0 auto;
+    width: 940px;
+}
+
+/*CSS RESET
+O HTML5 Boilerplate é um projeto que pretende fornecer um excelente ponto
+de partida para quem pretende desenvolver um novo projeto com HTML5. Uma
+série de técnicas para aumentar a compatibilidade da nova tecnologia com
+navegadores um pouco mais antigos estão presentes e o código é totalmente
+gratuito. Em seu arquivo "style.css", estão reunidas diversas técnicas de CSS
+Reset. Apesar de consistentes, algumas dessas técnicas são um pouco
+complexas, mas é um ponto de partida que podemos considerar.
+
+YUI3 CSS Reset
+Criado pelos desenvolvedores front-end do Yahoo!, uma das referências na área,esse CSS Reset é composto de 3 arquivos distintos. O primeiro deles, chamado de Reset, simplesmente muda todos os valores possíveis para um valor padrão,onde até mesmo as tags <h1> e <small> passam a ser exibidas com o mesmo tamanho. O segundo arquivo é chamado de Base, onde algumas margens e
+dimensões dos elementos são padronizadas. O terceiro é chamado de Font, onde
+o tamanho dos tipos é definido para que tenhamos um visual consistente
+inclusive em diversos dispositivos móveis.
+
+Eric Meyer CSS Reset
+Há também o famoso CSS Reset de Eric Meyer, que pode ser obtido em
+http://meyerweb.com/eric/tools/css/reset/. É apenas um arquivo com tamanho
+bem reduzido.
+
+*/
+
+/*Por exemplo, o elemento <li> de uma <ul> tem por padrão o valor block para a
+propriedade display. Se quisermos os elementos na horizontal, basta alterarmos
+a propriedade display da <li> para inline:*/
+.logotipo {
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.menu-opcoes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes ul li {
+    font-size: 15px;
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-opcoes a {
+    color: #003366;
+}
+
+.sacola {
+    background: url(../img/sacola.png) no-repeat top right;
+    font-size: 14px;
+    padding-right: 35px;
     text-align: right;
-    line-height: 3px; /* tamanho da altura de cada linha */
-    letter-spacing: 3px; /* tamanho do espaço entre cada letra */
-    word-spacing: 5px; /* tamanho do espaço entre cada palavra */
-    text-indent: 30px; /* tamanho da margem da primeira linha do texto */
+    width: 140px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-/*usando imagem no CSS e a imagem deve estar no mesmo diretorio
-do arquivo CSS*/
-h1 {
-    background-image: url(sobre-background.jpg);
+header {
+    position: relative;
 }

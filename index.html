@@ -3,15 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirror Fashion</title>
-    <link rel="stylesheet" href="/css/sobre.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
+
+<!--DICA:Pode ser interessante criar uma classe que determina a centralização horizontal
+de qualquer elemento, sem interferir em suas margens superior e inferior como
+no exemplo a seguir:
+1 .container {
+2 margin-right: auto;
+3 margin-left: auto;
+4 }
+Agora, é só adicionar a class "container" ao elemento, mesmo que ele já tenha
+outros valores para esse atributo:
+1 <div class="info container">
+2 <p>Conteúdo que deve ficar centralizado</p>
+3 </div><-->
 
 <body>
 
-    <h1>Mirror Fashion</h1>
+    <header class="container">
+        <h1><img src="img/logo.png" alt="Mirror Fashion"></h1>
+        <p class="sacola">Nenhum item na sacola de compras</p>
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href="#">Sua Conta</a></li>
+                <li><a href="#">Lista de Desejos</a></li>
+                <li><a href="#">Cartão Fidelidade</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <h2>Bem-vindo à Mirror Fashion, sua loja de roupas e acessórios.</h2>
 
